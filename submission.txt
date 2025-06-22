@@ -1,0 +1,43 @@
+Submission Proyek Akhir: Membangun ETL Pipeline Sederhana
+
+Nama        : Diva Anggreini Harahap
+ID          : mc319d5x2329
+
+Judul Proyek:
+Membangun ETL Pipeline Sederhana untuk Data Produk dari Website fashion-studio.dicoding.dev
+
+Deskripsi Singkat:
+Proyek ini merupakan implementasi ETL pipeline modular yang terdiri dari tiga tahap utama: Extract, Transform, dan Load. 
+Data produk diambil melalui scraping dari website fashion-studio.dicoding.dev dengan informasi lengkap seperti Title, Price, Rating, Colors, Size, dan Gender.
+
+Tahap transformasi dilakukan untuk membersihkan data, menghapus duplikasi, mengonversi harga dari dolar ke rupiah, dan memastikan tipe data sesuai kebutuhan.
+
+Data hasil transformasi disimpan ke dalam tiga repositori data:
+1. File CSV lokal ('products.csv')
+2. Google Sheets dengan akses public melalui service account
+3. Database PostgreSQL pada tabel 'products'
+
+Unit test telah dibuat dan dijalankan pada seluruh modul dengan test coverage sebesar 83%, memenuhi kriteria advanced.
+
+Semua file kode disusun secara modular dan terpisah sesuai ketentuan, meliputi:
+- utils/extract.py
+- utils/transform.py
+- utils/load.py
+- tests/ (folder berisi unit test)
+- main.py
+- requirements.txt
+- proyek-pemda-0fbbb0a3090c.json (service account credential)
+
+Berikut cara menjalankan proyek ini
+1. Install python dan semua dependency yang ada di requirements.txt
+`pip install -r requirements.txt`
+2. Menjalankan program utama
+`python main.py`
+3.Menjalankan unit test
+`python -m pytest tests`
+4. Menjalankan test coverage pada folder tests
+`coverage run -m pytest tests`
+5. Melihat laporan coverage
+`coverage report -m`
+
+
